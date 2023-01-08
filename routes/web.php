@@ -1,22 +1,30 @@
 <?php
-	
-	use App\Models\User;
-	use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+    use Illuminate\Support\Facades\Route;
+    use Inertia\Inertia;
 
-Route::get('/', function () {
+    /*
+    |--------------------------------------------------------------------------
+    | Web Routes
+    |--------------------------------------------------------------------------
+    |
+    | Here is where you can register web routes for your application. These
+    | routes are loaded by the RouteServiceProvider within a group which
+    | contains the "web" middleware group. Now create something great!
+    |
+    */
 
-    return ['Laravel' => User::first()];
-});
+    Route::get('/', function () {
+        return Inertia::render('Welcome', [
+            'app' => [
+                'laravel' => app()->version(),
+                'php' => phpversion(),
+                'name' => config('app.name'),
+                'env' => config('app.env'),
+                'debug' => config('app.debug'),
+                'url' => config('app.url'),
+            ],
+        ]);
+    });
 
-require __DIR__.'/auth.php';
+    require __DIR__.'/auth.php';

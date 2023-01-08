@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ES2022",
+      "dom"
+    ],
+    "types": [
+      "vite/client"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@pages/*": [
+        "resources/pages/*"
+      ],
+      "@components/*": [
+        "resources/components/*"
+      ]
+    }
+  },
+  "include": [
+    "resources/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

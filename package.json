@@ -1,0 +1,32 @@
+{
+  "name": "laravel-vite-inertia-svelte-unocss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./resources/app.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@inertiajs/inertia": "^0.11.1",
+    "@inertiajs/inertia-svelte": "^0.8.0",
+    "@inertiajs/progress": "^0.2.7"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.3",
+    "@sveltejs/vite-plugin-svelte": "^1.4.0",
+    "@tsconfig/svelte": "^3.0.0",
+    "@types/node": "^18.11.18",
+    "@unocss/core": "^0.48.3",
+    "@unocss/reset": "^0.48.3",
+    "laravel-vite-plugin": "^0.7.3",
+    "svelte": "^3.55.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "unocss": "^0.48.3",
+    "vite": "^3.2.5"
+  }
+}
