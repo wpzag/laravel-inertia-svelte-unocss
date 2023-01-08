@@ -1,16 +1,13 @@
 // @ts-ignore
 import { createInertiaApp } from '@inertiajs/inertia-svelte'
 import { InertiaProgress } from '@inertiajs/progress'
-
 import './assets/css/app.css'
 import '@unocss/reset/tailwind.css'
 import 'uno.css'
 
 InertiaProgress.init()
 createInertiaApp({
-  // @ts-ignore
-  resolve: (name) => importPageComponent(name, import.meta.glob('./pages/**/*.svelte')),
-
+  resolve: (name: string) => importPageComponent(name, import.meta.glob('./pages/**/*.svelte')),
   // @ts-ignore
   setup({ el, App, props }) {
     new App({ target: el, props })

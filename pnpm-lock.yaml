@@ -8,6 +8,7 @@ specifiers:
   '@sveltejs/vite-plugin-svelte': ^1.4.0
   '@tsconfig/svelte': ^3.0.0
   '@types/node': ^18.11.18
+  '@types/ziggy-js': ^1.3.2
   '@unocss/core': ^0.48.3
   '@unocss/reset': ^0.48.3
   laravel-vite-plugin: ^0.7.3
@@ -16,17 +17,21 @@ specifiers:
   typescript: ^4.9.4
   unocss: ^0.48.3
   vite: ^3.2.5
+  vite-plugin-run: ^0.2.1
+  ziggy-js: ^1.5.0
 
 dependencies:
   '@inertiajs/inertia': 0.11.1
   '@inertiajs/inertia-svelte': 0.8.0_puewdgytey5wjbiapvu2plhxa4
   '@inertiajs/progress': 0.2.7_@inertiajs+inertia@0.11.1
+  ziggy-js: 1.5.0
 
 devDependencies:
   '@iconify/json': 2.2.3
   '@sveltejs/vite-plugin-svelte': 1.4.0_svelte@3.55.0+vite@3.2.5
   '@tsconfig/svelte': 3.0.0
   '@types/node': 18.11.18
+  '@types/ziggy-js': 1.3.2
   '@unocss/core': 0.48.3
   '@unocss/reset': 0.48.3
   laravel-vite-plugin: 0.7.3_vite@3.2.5
@@ -35,6 +40,7 @@ devDependencies:
   typescript: 4.9.4
   unocss: 0.48.3_vite@3.2.5
   vite: 3.2.5_@types+node@18.11.18
+  vite-plugin-run: 0.2.1
 
 packages:
 
@@ -228,8 +234,18 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
+  /@types/history/4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: true
+
   /@types/node/18.11.18:
     resolution: {integrity: sha512-DHQpWGjyQKSHj3ebjFI/wRKcqQcdR+MoFBygntYOZytCqNfkd2ZC4ARDJ2DQqhjH5p85Nnd3jhUJIXrszFX/JA==}
+    dev: true
+
+  /@types/ziggy-js/1.3.2:
+    resolution: {integrity: sha512-hwnsR3tEy3jyW+akw5kwfyZ9+/MZ+jN659G6LoGKBL9LvOUv07fiMsZL3vaK8IfTo2OXVMa4elsX8r/nU/x9hw==}
+    dependencies:
+      '@types/history': 4.7.11
     dev: true
 
   /@unocss/astro/0.48.3_vite@3.2.5:
@@ -1069,6 +1085,11 @@ packages:
       side-channel: 1.0.4
     dev: false
 
+  /qs/6.9.7:
+    resolution: {integrity: sha512-IhMFgUmuNpyRfxA90umL7ByLlgRXu6tIfKPpF5TmcfRLlLCckfP/g3IQmju6jjpu+Hh8rA+2p6A27ZSPOOHdKw==}
+    engines: {node: '>=0.6'}
+    dev: false
+
   /queue-microtask/1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
@@ -1262,6 +1283,16 @@ packages:
       vite: 3.2.5_@types+node@18.11.18
     dev: true
 
+  /vite-plugin-run/0.2.1:
+    resolution: {integrity: sha512-myNBaXztQolJFgF98jJ0VgkQsQl8N8vXoo6yTaRP8Sr8epJg864Q1Hq8+r9p/2g8xe1YyR6ZUTglWNvVbaRdmw==}
+    dependencies:
+      '@antfu/utils': 0.5.2
+      debug: 4.3.4
+      picocolors: 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /vite/3.2.5_@types+node@18.11.18:
     resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -1319,3 +1350,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /ziggy-js/1.5.0:
+    resolution: {integrity: sha512-whzY4H/EMEKrXbbqQbncrSy9WN8N6sjzbVPdBjhQMauvODWtNUTDMq6Po55hPDx43GRFtIF22zrs/m2Z3qOi4g==}
+    dependencies:
+      qs: 6.9.7
+    dev: false

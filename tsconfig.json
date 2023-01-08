@@ -16,11 +16,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@pages/*": [
-        "resources/pages/*"
-      ],
-      "@components/*": [
-        "resources/components/*"
+      "@/*": [
+        "resources/*"
       ]
     }
   },

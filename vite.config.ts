@@ -6,6 +6,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { resolve } from 'path'
 import { homedir } from 'os'
 import Unocss from 'unocss/vite'
+import { run } from 'vite-plugin-run'
 
 const projectRootDir = resolve(__dirname)
 
@@ -13,7 +14,6 @@ let host = 'api.test'
 
 export default defineConfig({
   plugins: [
-
     laravel({
       input: ['resources/app.ts'],
       refresh: true
@@ -23,21 +23,28 @@ export default defineConfig({
         useVitePreprocess: true
       }
     }),
-
-    Unocss()
+    Unocss(),
+    // regenerate ziggy routes when any of the files in the routes folder changes
+    run([
+      {
+        name: 'ziggy',
+        run: ['php', 'artisan', 'ziggy:generate'],
+        condition: (file) => file.includes('/routes/') && file.endsWith('.php')
+      }
+    ])
   ],
   optimizeDeps: {
     include: ['@inertiajs/inertia', '@inertiajs/inertia-svelte']
   },
   resolve: {
     alias: {
-      '@pages': resolve(projectRootDir, 'resources/pages'),
-      '@components': resolve(projectRootDir, 'resources/components')
+      '@': resolve(projectRootDir, 'resources')
     }
   },
   server: detectServerConfig(host)
 })
 
+// fix : to make valet https work with vite
 function detectServerConfig(host: string) {
   let keyPath = resolve(homedir(), `.config/valet/Certificates/${host}.key`)
   let certificatePath = resolve(homedir(), `.config/valet/Certificates/${host}.crt`)
