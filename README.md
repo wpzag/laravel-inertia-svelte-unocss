@@ -13,6 +13,11 @@ This is a Laravel 9 starter template that is configured to use Vite, Svelte, Ine
 - Unocss
 - Typescript
 
+## Installation
 
-
+- `git clone https://github.com/wpzag/laravel-inertia-svelte-unocss.git`
+- Edit '.env' and set your database connection details
+- Generate app key `php artisan key:generate;`
+- Generate types `php artisan typescript:transform`
+- Generate ziggy routes `php artisan ziggy:generate`
 

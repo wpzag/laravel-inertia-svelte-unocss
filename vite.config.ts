@@ -30,6 +30,10 @@ export default defineConfig({
         name: 'ziggy',
         run: ['php', 'artisan', 'ziggy:generate'],
         condition: (file) => file.includes('/routes/') && file.endsWith('.php')
+      }, {
+        name: 'spatie typescript generator',
+        run: ['php', 'artisan', 'typescript:transform'],
+        condition: (file) => file.includes('/app/Data') && file.endsWith('.php')
       }
     ])
   ],
