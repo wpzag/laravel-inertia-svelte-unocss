@@ -12,6 +12,16 @@ This is a Laravel 9 starter template that is configured to use Vite, Svelte, Ine
 - Inertia
 - Unocss
 - Typescript
+- Spatie Laravel Data
+
+### Automatic route generation for Inertia ⚡
+
+`ziggy.js` file will be generated automatically from the `routes/web.php` file. This allows you to use the `route()`
+function in your Svelte components .
+
+### Automatic types generation for laravel-data package ⚡
+
+`generated.d.ts` file will be generated automatically from the data classes in the App/Data directory>
 
 ## Installation
 

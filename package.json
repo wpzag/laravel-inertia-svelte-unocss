@@ -25,10 +25,12 @@
     "@unocss/core": "^0.48.3",
     "@unocss/reset": "^0.48.3",
     "laravel-vite-plugin": "^0.7.3",
+    "sass": "^1.57.1",
     "svelte": "^3.55.0",
     "tslib": "^2.4.1",
     "typescript": "^4.9.4",
     "unocss": "^0.48.3",
+    "unplugin-auto-import": "^0.12.1",
     "vite": "^3.2.5",
     "vite-plugin-run": "^0.2.1"
   }
