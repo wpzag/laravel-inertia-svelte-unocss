@@ -14,9 +14,6 @@ html.dark, body.dark {
     @apply bg-slate-9 text-slate-3
 }
 
-html {
-    margin-left: calc(100vw - 100%);
-}
 
 :root {
     --color-primary: rgba(37, 99, 235, 1);

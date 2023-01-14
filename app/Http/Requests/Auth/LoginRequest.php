@@ -46,7 +46,7 @@ namespace App\Http\Requests\Auth;
                 RateLimiter::hit($this->throttleKey());
 
                 throw ValidationException::withMessages([
-                    'email' => __('auth.failed'),
+                    'email' => trans('auth.failed'),
                 ]);
             }
 
