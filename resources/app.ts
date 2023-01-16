@@ -1,10 +1,9 @@
 // @ts-ignore
-import { App, createInertiaApp } from "@inertiajs/inertia-svelte";
-import { InertiaProgress } from "@inertiajs/progress";
+import { createInertiaApp } from "@inertiajs/svelte";
 
 import "@unocss/reset/tailwind.css";
 import "uno.css";
-import "./assets/css/app.css";
+import "./assets/css/app.scss";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import Authenticated from "@/layouts/Authenticated.svelte";
 
@@ -14,10 +13,9 @@ const pagesWithoutDefaultLayout = [
     "Welcome",
 ];
 
-InertiaProgress.init();
 createInertiaApp({
     resolve,
-    setup({ el, App, props }: { el: HTMLElement; App: App; props: any }) {
+    setup({ el, App, props }) {
         new App({ target: el, props });
     },
 });

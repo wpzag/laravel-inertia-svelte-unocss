@@ -25,22 +25,22 @@
 
   <span
     class='block h-5 w-5 peer-focus-visible:(ring-2 ring-primary  dark:ring-indigo-9) dark:border-slate-6 border flex-shrink-0   flex items-center justify-center transition duration-200 ease-[cubic-bezier(0.4, 0, 0.2, 1)] rounded'
-    use:classes={
+    use:classes="{
       {
        'border-gray-300': !checked && !disabled,
        'bg-primary  border-primary': checked && !disabled,
        'bg-gray-200 dark:bg-gray-9  border-gray-200 ': disabled
      }
-    }
+    }"
 
   >
       <i
         class='i-bx-check text-white transition duration-150 delay-100 ease-[cubic-bezier(0.57, 1.48, 0.87, 1.09]'
-        use:classes={{
+        use:classes="{{
                   ' scale-0': !checked,
                   ' scale-full': checked,
                   'text-gray-500':disabled
-                }}
+                }}"
       ></i>
     </span>
   <span class='text-sm' class:disabled={$$restProps.disabled}>{computedLabel}</span>

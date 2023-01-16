@@ -1,5 +1,5 @@
 <script>
-  import { Link } from '@inertiajs/inertia-svelte'
+  import { Link } from '@inertiajs/svelte'
   import Guest from '@/layouts/Guest.svelte'
   import Button from '@/components/shared/Button.svelte'
   import Form from '@/components/shared/Form/Form.svelte'

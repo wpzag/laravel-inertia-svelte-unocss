@@ -54,11 +54,7 @@ export default defineConfig({
                 "svelte/easing",
                 "svelte/animate",
                 {
-                    "@inertiajs/inertia-svelte": [
-                        "inertia",
-                        "useForm",
-                        "InertiaApp",
-                    ],
+                    "@inertiajs/svelte": ["inertia", "useForm", "router"],
                 },
             ],
             dirs: ["resources/helpers/**", "resources/actions/**"],

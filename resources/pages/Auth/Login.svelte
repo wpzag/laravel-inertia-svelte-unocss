@@ -6,7 +6,7 @@
   import Form from '@/components/shared/Form/Form.svelte'
   import Field from '@/components/shared/Form/Field.svelte'
   import Button from '@/components/shared/Button.svelte'
-  import { Link } from '@inertiajs/inertia-svelte'
+  import { Link } from '@inertiajs/svelte'
 
   export let canResetPassword
   export let status

@@ -14,10 +14,10 @@
 
 </script>
 
-<div class='my5 dark:text-slate-3' use:classes={{
+<div class='my5 dark:text-slate-3' use:classes="{{
       'op50 ': disabled,
 
-    }}>
+    }}">
   <label class='mb-2 block' for={id}>{computedLabel} </label>
   <input
     {...$$restProps}

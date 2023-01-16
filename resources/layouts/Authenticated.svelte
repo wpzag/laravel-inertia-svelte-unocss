@@ -2,8 +2,7 @@
   import ApplicationLogo from '@/components/shared/ApplicationLogo.svelte'
   import { route } from '@/helpers/ziggy'
   import DarkThemeSwitcher from '@/components/shared/DarkThemeSwitcher.svelte'
-  import { inertia, page } from '@inertiajs/inertia-svelte'
-  import { Inertia } from '@inertiajs/inertia'
+  import { inertia, page } from '@inertiajs/svelte'
   import Avatar from '@/components/Avatar.svelte'
   import NavLink from '@/components/shared/NavLink.svelte'
 
@@ -19,7 +18,7 @@
       href: route('profile')
     }
   ]
-  Inertia.on('navigate', (event) => {
+  router.on('navigate', (event) => {
     activeRoute = event.detail.page.url
   })
 </script>
@@ -54,7 +53,7 @@
 
     </header>
 
-    {#key $page.url}
+    {#key $page.component}
       <main class='bg-white dark:bg-slate-8 dark:text-slate-3 rounded mt-5 p-6 rounded '
             in:fly|local={{ y: 30, duration: 250, delay: 300 }}
             out:fly|local={{ y: 30,duration: 250 }}

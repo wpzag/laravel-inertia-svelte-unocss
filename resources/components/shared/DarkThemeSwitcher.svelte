@@ -10,5 +10,5 @@
 		document.body.classList.toggle('dark');
 	}}
 >
-  <div class='i-carbon-moon  dark:i-carbon-sun '></div>
+  <i class='i-carbon-moon  dark:i-carbon-sun block'></i>
 </button>

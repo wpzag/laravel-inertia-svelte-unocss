@@ -11,9 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@inertiajs/inertia": "^0.11.1",
-    "@inertiajs/inertia-svelte": "^0.8.0",
-    "@inertiajs/progress": "^0.2.7",
+    "@inertiajs/svelte": "^1.0.0",
     "ziggy-js": "^1.5.0"
   },
   "devDependencies": {
