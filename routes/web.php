@@ -1,5 +1,9 @@
 <?php
 
+    use App\Actions\DeleteUser;
+    use App\Actions\GetUsers;
+    use App\Actions\StoreUser;
+    use App\Actions\UpdateUser;
     use Illuminate\Support\Facades\Route;
     use Inertia\Inertia;
 
@@ -32,9 +36,10 @@
             return Inertia::render('Dashboard');
         })->name('dashboard');
 
-        Route::get('profile', function () {
-            return Inertia::render('Profile');
-        })->name('profile');
+        Route::get('users', GetUsers::class)->name('users.index');
+        Route::post('users', StoreUser::class)->name('users.store');
+        Route::patch('users/{user}', UpdateUser::class)->name('users.update');
+        Route::delete('users/{user}', DeleteUser::class)->name('users.destroy');
     });
 
     require __DIR__.'/auth.php';

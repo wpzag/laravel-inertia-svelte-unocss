@@ -41,6 +41,7 @@ namespace App\Http\Middleware;
         {
             return array_merge(parent::share($request), [
                 'auth' => $request->user(),
+                'data' => fn () => $request->session()->get('data'),
 
             ]);
         }
