@@ -6,6 +6,7 @@ import "uno.css";
 import "./assets/css/app.scss";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import Authenticated from "@/layouts/Authenticated.svelte";
+import axios from "axios";
 
 const defaultLayout = Authenticated;
 const pagesWithoutDefaultLayout = [
@@ -15,6 +16,8 @@ const pagesWithoutDefaultLayout = [
 
 createInertiaApp({
     resolve,
+    // TODO : add types for this
+    //  @ts-ignore
     setup({ el, App, props }) {
         new App({ target: el, props });
     },
@@ -39,3 +42,9 @@ function getPages(pages: Record<string, () => Promise<unknown>>) {
         page.replace("./pages/", "").replace(".svelte", "")
     );
 }
+
+// set axios up for laravel
+// @ts-ignore
+window.axios = axios;
+// @ts-ignore
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
