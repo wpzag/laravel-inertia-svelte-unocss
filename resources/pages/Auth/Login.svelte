@@ -23,7 +23,7 @@
       {status}
     </div>
   {/if}
-  <Form let:form url={route('login')}>
+  <Form initialValues={{email:null,password:null,remember:false}} let:form url={route('login')}>
     <Field autofocus name='email' />
     <Field name='password' type='password' />
     <div class='flex justify-between items-center mb-7'>

@@ -10,7 +10,12 @@
 </svelte:head>
 
 <Guest>
-  <Form let:form>
+  <Form initialValues={{
+    name: '',
+    email: '',
+    password: '',
+    password_confirmation: '',
+  }} let:form>
     <Field name='name'></Field>
     <Field name='email'></Field>
     <Field name='password' type='password'></Field>

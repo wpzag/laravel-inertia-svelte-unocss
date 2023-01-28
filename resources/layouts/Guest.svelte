@@ -1,4 +1,4 @@
-<script>import ApplicationLogo from '@/components/shared/ApplicationLogo.svelte'
+<script>import ApplicationLogo from '@/components/layout/ApplicationLogo.svelte'
 import Link from '@/components/shared/Link.svelte'
 </script>
 
